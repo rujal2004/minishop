@@ -1,0 +1,2 @@
+{% extends "base.html" %}
+{% block content %}<section class="panel"><p class="eyebrow">One small step</p><h1>Checkout</h1>{% if not logged_in %}<p>Sign in before placing an order.</p><a class="button" href="{{ url_for('routes.login') }}">Go to login</a>{% else %}<form method="post"><label>Product ID<input name="product_id" type="number" min="1" required></label><label>Quantity<input name="quantity" type="number" min="1" value="1" required></label><button>Place order</button></form>{% endif %}</section>{% endblock %}

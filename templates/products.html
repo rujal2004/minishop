@@ -1,0 +1,2 @@
+{% extends "base.html" %}
+{% block content %}<section><p class="eyebrow">Simple goods</p><h1>Products</h1><div class="products">{% for product in products %}<article><h2>{{ product.name }}</h2><p class="price">${{ '%.2f'|format(product.price) }}</p><a class="button" href="{{ url_for('routes.checkout') }}?product_id={{ product.id }}">Buy</a></article>{% endfor %}</div></section>{% endblock %}

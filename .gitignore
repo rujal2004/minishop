@@ -1,0 +1,5 @@
+.env
+minishop.db
+__pycache__/
+*.py[cod]
+.venv/
